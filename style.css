@@ -15,11 +15,17 @@ body{
 }
 body{
     background-color:#F2EAE2;
+    overflow-x: hidden;
 }
 
+.heroimage{
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+}
 
 .maincontainer{
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -27,18 +33,33 @@ body{
 }
 
 .itemcard{
-    height: 450px;
+    height: 500px;
     width: 600px;
     background-color: #FFF;
     border-radius: 12px;
     display: flex;
     overflow: hidden;
+    margin: 45px;
+}
+
+@media (max-width: 500px) {
+    .itemcard{
+display: flex;
+width: 350px;
+height: 100%;
+flex-direction: column;
+    }
+    
+    .heroimage{
+        height: 342px;
+        width: 100%;
+    }
 }
 
 .itemtitle{
     display: flex;
     flex-direction: column;
-
+    gap: 12px;
 }
 
 .Subtitle{
@@ -69,6 +90,7 @@ line-height: 100%; /* 32px */
     flex-direction: column;
     padding: 32px;
     box-sizing: border-box;
+    gap: 32px;
     justify-content:space-between;
 }
 
@@ -98,10 +120,7 @@ line-height: 120%; /* 15.6px */
 text-decoration-line: line-through;
 }
 
-.heroimage{
-    width: 300px;
-    height: 100%;
-}
+
 
 .addtocard{
     display: flex;
@@ -115,3 +134,4 @@ background: var(--color-green-500, #3D8168);
 border-style: none;
 color: white;
 }
+
